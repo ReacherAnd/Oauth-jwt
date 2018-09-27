@@ -31,6 +31,7 @@ public class JwtUtil {
 
 	@Value("${spring.profiles.active}")
 	private String profiles;
+
 	private Base64UrlCodec base64UrlCodec = new Base64UrlCodec();
 
 	/**

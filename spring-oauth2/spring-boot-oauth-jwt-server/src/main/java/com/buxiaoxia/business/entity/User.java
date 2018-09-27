@@ -17,19 +17,23 @@ import java.util.List;
  */
 @Data
 @Entity
-@Table(name = "user")
+@Table(name = "t_role")
 public class User implements UserDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
+	@Column(name = "c_name")
 	private String name;
 
+	@Column(name = "p_id")
 	private String username;
 
+	@Column(name = "c_parent_id")
 	private String password;
 
+	@Column(name = "create_at")
 	private Date createAt;
 
 	@Override

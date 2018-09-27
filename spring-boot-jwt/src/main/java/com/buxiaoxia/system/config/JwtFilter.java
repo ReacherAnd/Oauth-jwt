@@ -7,9 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
+import java.util.List;
 
 @Component
 public class JwtFilter extends HandlerInterceptorAdapter {
@@ -35,5 +40,6 @@ public class JwtFilter extends HandlerInterceptorAdapter {
 			throw new AuthorizationException("认证失败");
 		}
 	}
+
 
 }
